@@ -87,6 +87,11 @@ d3.csv("aapl.csv", function(error, data) {
 	.style("text-anchor", "end")
 	.text("price ($)");
 
+	svg.append("path")
+		.datum(data)
+	.attr("class", "line")
+	.attr("d", line);
+
 });
 
 
